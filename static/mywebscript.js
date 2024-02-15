@@ -7,6 +7,8 @@ let RunSentimentAnalysis = ()=>{
             document.getElementById("system_response").innerHTML = xhttp.responseText;
         }
     };
+    console.log('before', xhttp)
     xhttp.open("GET", "emotionDetector?textToAnalyze"+"="+textToAnalyze, true);
+    console.log('after', xhttp)
     xhttp.send();
 }
